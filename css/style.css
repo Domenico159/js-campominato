@@ -39,7 +39,6 @@ ul li{
     height: 35px;
     border: 2px solid #000;
     background-color: rgb(145, 143, 143);
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +46,8 @@ ul li{
 
 ul li p{
     opacity: 0;
+    cursor: pointer;
+    padding: 2px;
 }
 
 

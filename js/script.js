@@ -10,6 +10,8 @@ var campo = document.getElementById('campo');
 
 var bombe = [];
 
+var numeriSalvi = [];
+
 
 
     
@@ -29,17 +31,17 @@ var bombe = [];
 for(var i = 1 ; i <= numeriTot ; i++){
 
     if(! bombe.includes(i)){
-        campo.innerHTML += '<li id ="ciao">' + '<p class="minibox">' + i + '</p>' + '</li>' ;
+        campo.innerHTML += '<li>' + '<p class="minibox">' + i + '</p>' + '</li>' ;
     }
     else{
-        campo.innerHTML += '<li>' + '<p id="mini-box" class="covid minibox">'+ '</p>' + '</li>' ; 
+        campo.innerHTML += '<li>' + '<p class="covid minibox">'+ '</p>' + '</li>' ; 
     }
 
 
 
 }
 
-   var elemento = document.getElementById('ciao');
+    
 
     var miniBoxes = document.getElementsByClassName('minibox');
 
@@ -49,18 +51,26 @@ for(var i = 1 ; i <= numeriTot ; i++){
 
     for(var i = 0 ; i < miniBoxes.length ; i++){
 
+        var thisBox = miniBoxes[i];
 
-        miniBoxes[i].addEventListener('click', 
+        var thisBomb = bombe[i];
+
+        thisBox.addEventListener('click', 
 
                     function(){
                         
-                        miniBoxes.className = miniBoxes.classList + " visibility";
+                        this.className = this.classList + " visibility";
+
+                        if(this === thisBomb ){
+
+                        }
         
         
                     })
 
-                    console.log(miniBoxes[i]);
+                  
     }
+
 
 
 
@@ -76,6 +86,7 @@ function numberRandom(min,max){
 
 
 }
+
 
 
 
