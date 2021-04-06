@@ -1,0 +1,54 @@
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+/* Main-content */
+
+main .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.container-campo{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+
+ul li{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #000;
+    background-color: rgb(145, 143, 143);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red{
+    background-color: transparent;
+    background-image: url(../img/SARS-CoV-2_without_background.png);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
