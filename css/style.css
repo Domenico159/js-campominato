@@ -45,10 +45,16 @@ ul li{
     align-items: center;
 }
 
-.red{
-    background-color: transparent;
+ul li p{
+    opacity: 0;
+}
+
+.covid{
     background-image: url(../img/SARS-CoV-2_without_background.png);
     background-position: center;
     background-size: 25px;
     background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(194, 194, 194);
 }

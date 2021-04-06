@@ -29,10 +29,10 @@ var bombe = [];
 for(var i = 1 ; i <= numeriTot ; i++){
 
     if(! bombe.includes(i)){
-        campo.innerHTML += '<li id ="ciao">' + i + '</li>' ;
+        campo.innerHTML += '<li id ="ciao">' + '<p>' + i + '</p>' + '</li>' ;
     }
     else{
-        campo.innerHTML += '<li class="red">' + '</li>' ; 
+        campo.innerHTML += '<li>' + '<p class="covid">'+ '</p>' + '</li>' ; 
     }
 
 
