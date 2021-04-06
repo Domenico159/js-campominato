@@ -119,7 +119,7 @@ for(var i = 0 ; i < numeriTot ; i++){
                             alert('Mi dispiace hai preso il covid-19 , RIMETTITI PRESTO !!!! :D');
                             setTimeout(function(){ window.location.reload() }, 3000);
                         }else if(numeriTrovati.length == possibilita){
-                            alert('HAI VINTO!!!! :D');
+                            alert('HAI VINTO!!!! SEI RIUSCITO A SFUGGIRE AL COVID-19 :D');
                             setTimeout(function(){ window.location.reload() }, 3000);
                         }else{
                             // console.log(false);
