@@ -10,7 +10,7 @@ var campo = document.getElementById('campo');
 
 var bombe = [];
 
-var numeriSalvi = [];
+
 
 
 
@@ -67,7 +67,7 @@ for(var i = 1 ; i <= numeriTot ; i++){
                         if(isNaN(thisNum)){
                             // console.log(true);
                             alert('Mi dispiace hai preso il covid-19 , RIMETTITI PRESTO !!!! :D');
-                            window.location.reload();
+                            setTimeout(function(){ window.location.reload() }, 3000);
                         }else{
                             // console.log(false);
                             alert('Bravo hai trovato il numero salvo , continua a cercare');
@@ -77,6 +77,8 @@ for(var i = 1 ; i <= numeriTot ; i++){
 
                   
     }
+
+
 
     
 
