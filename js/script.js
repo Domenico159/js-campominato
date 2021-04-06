@@ -1,6 +1,6 @@
 
 
-var numeriTot = 100;
+var numeriTot = 0;
 
 var bombeTot = 16;
 
@@ -10,8 +10,27 @@ var campo = document.getElementById('campo');
 
 var bombe = [];
 
+var difficolta =  prompt('Inserire un tipo di difficoltà \n facile \n medio \n difficile');
 
 
+   while((difficolta !== 'difficile' && difficolta !== 'medio' && difficolta !== 'facile') || (!isNaN(difficolta)) ){
+    difficolta =  prompt('Dato errato , prego inserire un tipo di  difficoltà \n facile \n medio \n difficile');
+   }
+
+
+   switch(difficolta){
+       case 'facile' :
+           numeriTot = 100;
+           break
+
+           case 'medio' :
+           numeriTot = 80;
+           break
+
+           case 'difficile' :
+           numeriTot = 50;
+           break
+   }
 
 
     
