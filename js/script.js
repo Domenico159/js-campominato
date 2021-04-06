@@ -61,15 +61,25 @@ for(var i = 1 ; i <= numeriTot ; i++){
                         
                         this.className = this.classList + " visibility";
 
-                        if(this === thisBomb ){
+                        var thisNum = parseInt(this.innerHTML);
+                        console.log(thisNum);
 
+                        if(isNaN(thisNum)){
+                            // console.log(true);
+                            alert('Mi dispiace hai preso il covid-19 , RIMETTITI PRESTO !!!! :D');
+                            window.location.reload();
+                        }else{
+                            // console.log(false);
+                            alert('Bravo hai trovato il numero salvo , continua a cercare');
                         }
-        
         
                     })
 
                   
     }
+
+    
+
 
 
 
