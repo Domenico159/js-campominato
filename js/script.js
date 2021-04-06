@@ -29,24 +29,41 @@ var bombe = [];
 for(var i = 1 ; i <= numeriTot ; i++){
 
     if(! bombe.includes(i)){
-        campo.innerHTML += '<li id ="ciao">' + '<p>' + i + '</p>' + '</li>' ;
+        campo.innerHTML += '<li id ="ciao">' + '<p class="minibox">' + i + '</p>' + '</li>' ;
     }
     else{
-        campo.innerHTML += '<li>' + '<p class="covid">'+ '</p>' + '</li>' ; 
+        campo.innerHTML += '<li>' + '<p id="mini-box" class="covid minibox">'+ '</p>' + '</li>' ; 
     }
 
 
-    var elemento = document.getElementById('ciao');
 
-elemento.addEventListener('click', 
-
-            function(){
-                
-                var thisElement = this;
-
-
-            })
 }
+
+   var elemento = document.getElementById('ciao');
+
+    var miniBoxes = document.getElementsByClassName('minibox');
+
+   console.log(miniBoxes);
+
+
+
+    for(var i = 0 ; i < miniBoxes.length ; i++){
+
+
+        miniBoxes[i].addEventListener('click', 
+
+                    function(){
+                        
+                        miniBoxes.className = miniBoxes.classList + " visibility";
+        
+        
+                    })
+
+                    console.log(miniBoxes[i]);
+    }
+
+
+
 
 
 /******************************************************

@@ -49,6 +49,7 @@ ul li p{
     opacity: 0;
 }
 
+
 .covid{
     background-image: url(../img/SARS-CoV-2_without_background.png);
     background-position: center;
@@ -57,4 +58,8 @@ ul li p{
     height: 100%;
     width: 100%;
     background-color: rgb(194, 194, 194);
+}
+
+.visibility{
+    opacity: 1;
 }
