@@ -10,6 +10,10 @@ var campo = document.getElementById('campo');
 
 var bombe = [];
 
+var numeriSalvi = [];
+
+var numeriTrovati = [];
+
 var difficolta =  prompt('Inserire un tipo di difficoltà \n facile \n medio \n difficile');
 
 
@@ -33,12 +37,14 @@ var difficolta =  prompt('Inserire un tipo di difficoltà \n facile \n medio \n 
    }
 
 
+
+   console.log('Numeri salvi' + numeriSalvi);
     
 
 
   while(bombe.length < bombeTot){
         
-    var randomNumber = numberRandom(1 , 100);
+    var randomNumber = numberRandom(1 , (numeriTot)+2);
 
        if(! bombe.includes(randomNumber)){
           bombe.push(randomNumber);
@@ -47,10 +53,29 @@ var difficolta =  prompt('Inserire un tipo di difficoltà \n facile \n medio \n 
   }
 
 
-for(var i = 1 ; i <= numeriTot ; i++){
+  while( numeriSalvi.length < numeriTot ){
+
+    var randomNumber = numberRandom(1 , (numeriTot) + 2);
+
+    if(! numeriSalvi.includes(randomNumber)){
+        numeriSalvi.push(randomNumber);
+
+        
+
+       }
+
+
+  }
+
+//   console.table(numeriSalvi);
+//   console.log(bombe);
+console.log(numeriSalvi.length);
+
+
+for(var i = 0 ; i < numeriTot ; i++){
 
     if(! bombe.includes(i)){
-        campo.innerHTML += '<li>' + '<p class="minibox">' + i + '</p>' + '</li>' ;
+        campo.innerHTML += '<li>' + '<p class="minibox">' + numeriSalvi[i] + '</p>' + '</li>' ;
     }
     else{
         campo.innerHTML += '<li>' + '<p class="covid minibox">'+ '</p>' + '</li>' ; 
@@ -60,11 +85,13 @@ for(var i = 1 ; i <= numeriTot ; i++){
 
 }
 
+
     
 
     var miniBoxes = document.getElementsByClassName('minibox');
 
    console.log(miniBoxes);
+   console.log(bombe);
 
 
 
@@ -80,6 +107,10 @@ for(var i = 1 ; i <= numeriTot ; i++){
                         
                         this.className = this.classList + " visibility";
 
+                        bombeTot = parseInt((bombe.length) - 1);
+
+                        possibilita = parseInt(numeriTot) - bombeTot ;
+
                         var thisNum = parseInt(this.innerHTML);
                         console.log(thisNum);
 
@@ -87,15 +118,25 @@ for(var i = 1 ; i <= numeriTot ; i++){
                             // console.log(true);
                             alert('Mi dispiace hai preso il covid-19 , RIMETTITI PRESTO !!!! :D');
                             setTimeout(function(){ window.location.reload() }, 3000);
+                        }else if(numeriTrovati.length == possibilita){
+                            alert('HAI VINTO!!!! :D');
+                            setTimeout(function(){ window.location.reload() }, 3000);
                         }else{
                             // console.log(false);
                             alert('Bravo hai trovato il numero salvo , continua a cercare');
+                            numeriTrovati.push(thisNum);
+                        //     console.table(numeriTrovati);
+                        //     console.table(numeriSalvi);
+                        //    console.log(possibilita);
                         }
         
                     })
 
                   
     }
+
+                      
+ 
 
 
 
